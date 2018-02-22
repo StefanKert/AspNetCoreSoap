@@ -1,0 +1,18 @@
+<h1>WhoIs-Information for Hostname</h1>
+<p>Put in a hostname and get the WhoIs-Information requested via a SOAP service (http://www.webservicex.net/whois.asmx)</p>
+<div class="row who-is-page-row">
+    <div class="col-sm-12">
+        <input type="text" (keyup)="keyUp.emit(hostName.value)" #hostName class="form-control" placeholder="Hostname">
+    </div>
+</div>
+
+<div class="row who-is-page-row" *ngIf="isLoading">
+    <div class="alert alert-warning" role="alert">
+        Loading Who Is Information....
+    </div>
+</div>
+
+<div class="row who-is-page-row who-is-info-row" *ngIf="!isLoading">
+    <div *ngIf="whoIsInformation" class="alert alert-success" role="alert">{{whoIsInformation}}</div>
+    <div *ngIf="error" class="alert alert-danger" role="alert">An error has occurred: {{error}}</div>
+</div>
