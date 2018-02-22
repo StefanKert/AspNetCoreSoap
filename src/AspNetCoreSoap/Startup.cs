@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreSoap.Contracts;
+using AspNetCoreSoap.Soap;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -22,6 +24,9 @@ namespace AspNetCoreSoap
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+			services.AddScoped<IWhoIsRepository, WhoIsSoapRepository>((s) => {
+				return new WhoIsSoapRepository(Configuration["WhoIsSoapUrl"]);
+			});
             services.AddMvc();
         }
 

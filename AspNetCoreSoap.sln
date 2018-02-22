@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSoap.Soap", "src\AspNetCoreSoap.Soap\AspNetCoreSoap.Soap.csproj", "{F3E3E75A-85EC-42E8-B240-659324DBC49B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSoap", "src\AspNetCoreSoap\AspNetCoreSoap.csproj", "{3497F035-CA2E-4BDD-BA5B-70B8ED4DDA33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreSoap", "src\AspNetCoreSoap\AspNetCoreSoap.csproj", "{3497F035-CA2E-4BDD-BA5B-70B8ED4DDA33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSoap.Contracts", "src\AspNetCoreSoap.Contracts\AspNetCoreSoap.Contracts.csproj", "{DA9CAC18-E3AA-44BB-86BB-A57B839E3385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3497F035-CA2E-4BDD-BA5B-70B8ED4DDA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3497F035-CA2E-4BDD-BA5B-70B8ED4DDA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3497F035-CA2E-4BDD-BA5B-70B8ED4DDA33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9CAC18-E3AA-44BB-86BB-A57B839E3385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9CAC18-E3AA-44BB-86BB-A57B839E3385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9CAC18-E3AA-44BB-86BB-A57B839E3385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9CAC18-E3AA-44BB-86BB-A57B839E3385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

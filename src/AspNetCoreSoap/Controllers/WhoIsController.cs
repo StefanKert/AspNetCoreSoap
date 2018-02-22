@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreSoap.Soap;
+using AspNetCoreSoap.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreSoap.Controllers
@@ -11,15 +7,15 @@ namespace AspNetCoreSoap.Controllers
 	[Route("api/[controller]")]
     public class WhoIsController : Controller
     {
-		private WhoIsSoapRepository _webService;
+		private IWhoIsRepository _whoIsRepository;
 
-		public WhoIsController() {
-			_webService = new WhoIsSoapRepository();
+		public WhoIsController(IWhoIsRepository whoIsRepository) {
+			_whoIsRepository = whoIsRepository;
 		}
 
         [HttpGet("{hostName}")]
 		public async Task<IActionResult> Get(string hostName){
-			var whoIsInfo = await _webService.GetWhoIsForHostNameAsync(hostName);
+			var whoIsInfo = await _whoIsRepository.GetWhoIsForHostNameAsync(hostName);
 			return Ok(whoIsInfo);
 		}
     }

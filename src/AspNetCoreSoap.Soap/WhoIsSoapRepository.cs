@@ -1,4 +1,5 @@
-﻿using AspNetCoreSoap.Soap.WhoIsService;
+﻿using AspNetCoreSoap.Contracts;
+using AspNetCoreSoap.Soap.WhoIsService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,9 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreSoap.Soap
 {
-	public class WhoIsSoapRepository
+	public class WhoIsSoapRepository : IWhoIsRepository
 	{
 		private readonly string _url;
-
-		public WhoIsSoapRepository() : this("http://www.webservicex.net/whois.asmx") {
-
-		}
-
 		public WhoIsSoapRepository(string url) {
 			this._url = url;
 		}
